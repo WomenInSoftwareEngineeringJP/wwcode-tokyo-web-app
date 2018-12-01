@@ -1,4 +1,8 @@
 class Url < ApplicationRecord
-  validates_presence_of :slug, :original_url
-  validates_uniqueness_of :slug
+  validates :original_url, presence: true, url: true
+  validates :slug, presence: true, uniqueness: true, slug: true
+
+  def to_param
+    slug
+  end
 end
