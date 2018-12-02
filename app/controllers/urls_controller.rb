@@ -7,9 +7,10 @@ class UrlsController < ApplicationController
     @urls = Url.all
   end
 
-  # GET /urls/1
-  # GET /urls/1.json
+  # GET /urls/:slug
+  # GET /urls/:slug.json
   def show
+    redirect_to @url.original_url
   end
 
   # GET /urls/new
@@ -17,7 +18,7 @@ class UrlsController < ApplicationController
     @url = Url.new
   end
 
-  # GET /urls/1/edit
+  # GET /urls/:slug/edit
   def edit
   end
 
@@ -37,8 +38,8 @@ class UrlsController < ApplicationController
     end
   end
 
-  # PATCH/PUT /urls/1
-  # PATCH/PUT /urls/1.json
+  # PATCH/PUT /urls/:slug
+  # PATCH/PUT /urls/:slug.json
   def update
     respond_to do |format|
       if @url.update(url_params)
@@ -51,8 +52,8 @@ class UrlsController < ApplicationController
     end
   end
 
-  # DELETE /urls/1
-  # DELETE /urls/1.json
+  # DELETE /urls/:slug
+  # DELETE /urls/:slug.json
   def destroy
     @url.destroy
     respond_to do |format|
