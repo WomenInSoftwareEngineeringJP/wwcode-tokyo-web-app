@@ -1,16 +1,11 @@
-server '206.189.152.122', port: 22, roles: [:web, :app, :db], primary: true
+server '206.189.152.122', port: 80, roles: [:web, :app, :db], primary: true
 
-set :user, "rails"
-set :application, "url_shortener"
-set :repo_url, "git@github.com:WWCodeTokyo/url_shortener.git"
-
-# Default branch is :master
-# ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
-
-set :migration_role, :app
-
+set :repo_url,        'git@github.com:WWCodeTokyo/url_shortener.git'
+set :application,     'url_shortener'
+set :user,            'rails'
 set :puma_threads,    [4, 16]
 set :puma_workers,    0
+
 set :pty,             true
 set :use_sudo,        false
 set :stage,           :production
@@ -26,21 +21,16 @@ set :puma_preload_app, true
 set :puma_worker_timeout, nil
 set :puma_init_active_record, true
 
-append :linked_dirs, 'log', 'tmp/pids', 'tmp/cache', 'tmp/sockets'
-
-append :linked_files, 'config/database.yml', 'config/master.key'
-
-# Default value for default_env is {}
-# set :default_env, { path: "/opt/ruby/bin:$PATH" }
-
-# Default value for local_user is ENV['USER']
-# set :local_user, -> { `git config user.name`.chomp }
-
-# Default value for keep_releases is 5
+## Defaults:
+# set :scm,           :git
+# set :branch,        :master
+# set :format,        :pretty
+# set :log_level,     :debug
 # set :keep_releases, 5
 
-# Uncomment the following to require manually verifying the host key before first deploy.
-# set :ssh_options, verify_host_key: :secure
+## Linked Files & Directories (Default None):
+set :linked_files, %w{config/database.yml config/master.key}
+set :linked_dirs,  %w{bin log tmp/pids tmp/cache tmp/sockets vendor/bundle public/system}
 
 namespace :puma do
   desc 'Create Directories for Puma Pids and Socket'
@@ -86,3 +76,7 @@ namespace :deploy do
   after  :finishing,    :cleanup
   after  :finishing,    :restart
 end
+
+# ps aux | grep puma    # Get puma pid
+# kill -s SIGUSR2 pid   # Restart puma
+# kill -s SIGTERM pid   # Stop puma
