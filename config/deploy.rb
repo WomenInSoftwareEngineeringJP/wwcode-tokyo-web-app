@@ -1,4 +1,4 @@
-server '206.189.152.122', port: 80, roles: [:web, :app, :db], primary: true
+server '206.189.152.122', port: 22, roles: [:web, :app, :db], primary: true
 
 set :repo_url,        'git@github.com:WWCodeTokyo/url_shortener.git'
 set :application,     'url_shortener'
@@ -41,7 +41,7 @@ namespace :puma do
     end
   end
 
-  before :start, :make_dirs
+  #before :start, :make_dirs
 end
 
 namespace :deploy do
