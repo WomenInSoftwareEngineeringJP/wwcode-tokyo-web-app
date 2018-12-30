@@ -1,4 +1,4 @@
-server '206.189.152.122', port: 22, roles: [:web, :app, :db], primary: true
+server '206.189.152.122', port: 22
 
 set :repo_url,        'git@github.com:WWCodeTokyo/url_shortener.git'
 set :application,     'url_shortener'
@@ -29,7 +29,7 @@ set :puma_init_active_record, true
 # set :keep_releases, 5
 
 ## Linked Files & Directories (Default None):
-#set :linked_files, %w{config/database.yml config/master.key}
+set :linked_files, %w{config/database.yml config/master.key}
 set :linked_dirs,  %w{bin log tmp/pids tmp/cache tmp/sockets vendor/bundle public/system}
 
 namespace :puma do
