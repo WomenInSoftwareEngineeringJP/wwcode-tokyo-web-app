@@ -29,8 +29,8 @@ class UrlsController < ApplicationController
 
     respond_to do |format|
       if @url.save
-        format.html { redirect_to @url, notice: 'Url was successfully created.' }
-        format.json { render :show, status: :created, location: @url }
+        format.html { redirect_to urls_url, notice: 'Url was successfully created.' }
+        format.json { render :show, status: :created, location: urls_url }
       else
         format.html { render :new }
         format.json { render json: @url.errors, status: :unprocessable_entity }
@@ -43,8 +43,8 @@ class UrlsController < ApplicationController
   def update
     respond_to do |format|
       if @url.update(url_params)
-        format.html { redirect_to @url, notice: 'Url was successfully updated.' }
-        format.json { render :show, status: :ok, location: @url }
+        format.html { redirect_to urls_url, notice: 'Url was successfully updated.' }
+        format.json { render :show, status: :ok, location: urls_url }
       else
         format.html { render :edit }
         format.json { render json: @url.errors, status: :unprocessable_entity }

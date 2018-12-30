@@ -1,4 +1,7 @@
-<p id="notice"><%= notice %></p>
+<% if notice.present? %>
+  <div id="notice" class="alert alert-warning mt-3" role="alert"><%= notice %></div>
+<% end %>
+
 <h1>All URLs</h1>
 
 <%= link_to 'New URL', new_url_path, class: 'btn btn-primary my-2' %>
