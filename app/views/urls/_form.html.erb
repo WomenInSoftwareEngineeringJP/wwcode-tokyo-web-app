@@ -1,12 +1,11 @@
 <%= form_with(model: url, local: true) do |form| %>
   <% if url.errors.any? %>
-    <div id="error_explanation">
+    <div id="error_explanation" class="alert alert-danger">
       <h2><%= pluralize(url.errors.count, "error") %> prohibited this url from being saved:</h2>
-
       <ul>
-      <% url.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
+        <% url.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
       </ul>
     </div>
   <% end %>
