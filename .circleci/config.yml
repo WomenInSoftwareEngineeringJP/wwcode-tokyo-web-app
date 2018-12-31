@@ -15,7 +15,8 @@ jobs:
             - "77:fe:68:96:9c:cf:4f:80:bc:97:6c:1a:7c:79:6a:7f"
             - "9jkX0XuOT9ASnnPhe98R6PofPE5kioYwTM+d5cd5e38"
       - run:
-          name: access server
-          command: |
-            echo '206.189.152.122 ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBOJV2P+Gof/pH6QRl2n18dySJwLU/TMdk0wCFFWTUsfFiAUzTQjNa3I/kA7ebhmcry1Z1hh+Qn42MCF0l9Y8jtU=' >> ~/.ssh/known_hosts
-            ssh rails@206.189.152.122 "/home/rails/url_shortener/bin/update"
+          name: add host
+          command: echo '206.189.152.122 ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBOJV2P+Gof/pH6QRl2n18dySJwLU/TMdk0wCFFWTUsfFiAUzTQjNa3I/kA7ebhmcry1Z1hh+Qn42MCF0l9Y8jtU=' >> ~/.ssh/known_hosts
+      - run:
+          name: access server and update
+          command: ssh rails@206.189.152.122 "cd /home/rails/url_shortener && bin/update"
