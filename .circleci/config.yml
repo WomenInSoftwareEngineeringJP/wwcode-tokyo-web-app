@@ -18,5 +18,8 @@ jobs:
           name: add host
           command: echo '206.189.152.122 ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBOJV2P+Gof/pH6QRl2n18dySJwLU/TMdk0wCFFWTUsfFiAUzTQjNa3I/kA7ebhmcry1Z1hh+Qn42MCF0l9Y8jtU=' >> ~/.ssh/known_hosts
       - run:
-          name: access server and deploy
-          command: ssh rails@206.189.152.122 "cd /home/rails/url_shortener && ./deploy"
+          name: access server
+          command: ssh rails@206.189.152.122
+      - run:
+          name: deploy
+          command: cd /home/rails/url_shortener && ./deploy
