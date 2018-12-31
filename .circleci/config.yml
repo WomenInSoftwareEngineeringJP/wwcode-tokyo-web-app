@@ -20,3 +20,11 @@ jobs:
       - run:
           name: Deploy
           command: ssh rails@206.189.152.122 "cd /home/rails/url_shortener && ./deploy"
+workflows:
+  version: 2
+  production-deploy:
+    jobs:
+      - build:
+          filters:
+            branches:
+              only: master
