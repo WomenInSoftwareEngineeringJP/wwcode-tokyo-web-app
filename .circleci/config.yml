@@ -11,8 +11,8 @@ jobs:
     steps:
       - checkout
       - add_ssh_keys:
-        fingerprints:
-          - "77:fe:68:96:9c:cf:4f:80:bc:97:6c:1a:7c:79:6a:7f"
+          fingerprints:
+            - "77:fe:68:96:9c:cf:4f:80:bc:97:6c:1a:7c:79:6a:7f"
       - run:
           name: access server
           command: ssh rails@206.189.152.122
