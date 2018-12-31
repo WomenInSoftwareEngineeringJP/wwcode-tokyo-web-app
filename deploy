@@ -1,14 +1,2 @@
 #!/bin/bash
-
-echo "== Pulling the latest version =="
-git pull origin master
-
-echo "== Installing dependencies =="
-gem install bundler --conservative
-bundle install
-
-echo "== Updating database =="
-bundle exec rake db:migrate
-
-echo "== Restarting application server =="
-systemctl restart rails.service
+eval "ruby bin/update"
