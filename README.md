@@ -1,15 +1,19 @@
-# README
+# URL Shortener
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Just a simple URL shortener app to transform long URLs into something like `wwcode.jp/[something]`.
+You can access the deployed version here: https://wwcode.jp/urls
 
-Things you may want to cover:
+# How to contribute
 
-* Ruby version
+### Setup your environment
 
-* System dependencies
-
-* Configuration
+- Make sure you have ruby 2.5.3 installed on your system
+  - [Installing ruby](https://www.ruby-lang.org/en/documentation/installation/)
+  
+- Make sure you have PostgreSQL version 9.1 or newer
+  - [PostgreSQL Download](https://www.postgresql.org/download/)
+  
+- Create and configure your database
 
 * Database creation
 
