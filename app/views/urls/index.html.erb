@@ -5,6 +5,7 @@
 <h1>All URLs</h1>
 
 <%= link_to 'New URL', new_url_path, class: 'btn btn-primary my-2' %>
+<%= link_to 'Sign out', destroy_user_session_path, method: :delete, class: 'btn btn-secondary my-2' %>
 
 <table class="table">
   <thead>

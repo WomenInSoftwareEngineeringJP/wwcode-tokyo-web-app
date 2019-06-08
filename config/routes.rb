@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-  root to: 'urls#new'
+  devise_for :users
+  root to: 'urls#index'
   resources :urls, param: :slug
 
   get '/:slug', to: 'urls#show'
