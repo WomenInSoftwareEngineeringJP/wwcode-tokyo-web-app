@@ -34,3 +34,4 @@ ja:
     login:
       title: 'Adminログイン'
       button: 'ログイン'
+      forgot_password: 'パスワードをお忘れですか？'

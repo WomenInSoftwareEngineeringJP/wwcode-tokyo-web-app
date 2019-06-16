@@ -34,3 +34,4 @@ en:
     login:
       title: 'Admin login'
       button: 'Login'
+      forgot_password: 'Forgot your password?'
