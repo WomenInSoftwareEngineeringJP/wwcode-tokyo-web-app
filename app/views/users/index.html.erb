@@ -1,3 +1,21 @@
-<% @users.each do |user| %>
-  <%= user.name %>
-<% end %>
+<div class="container list-container">
+  <h3 class="mt-3">Manage Users</h3>
+  <table class="table mt-4">
+    <thead>
+      <tr>
+        <th scope="col">Name</th>
+        <th scope="col">Email</th>
+        <th scope="col">Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @users.each do |user| %>
+        <tr>
+          <td><%= user.name %></td>
+          <td><%= user.email %></td>
+          <td>Text</td>
+        </tr>
+    <% end %>
+    </tbody>
+  </table>
+</div>
