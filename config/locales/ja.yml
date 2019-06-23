@@ -30,8 +30,36 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 ja:
+  activerecord:
+    errors:
+      models:
+        user:
+          blank: ' を入力して下さい'
+          invalid: ' は有効ではありません'
+          taken: ' はすでに存在しています'
+    attributes:
+      user:
+        name: '名前'
+        email: 'メール'
+  helpers:
+    label:
+      user:
+        name: '名前'
+        email: 'メール'
+  common:
+    save: '保存'
   admin:
     login:
       title: 'Adminログイン'
       button: 'ログイン'
       forgot_password: 'パスワードをお忘れですか？'
+  users:
+    attributes:
+      name: '名前'
+      email: 'メール'
+      action: 'アクション'
+    index:
+      title: 'ユーザー管理'
+    new:
+      title: 'ユーザー作成'
+      notice: 'ユーザーが作成されました'

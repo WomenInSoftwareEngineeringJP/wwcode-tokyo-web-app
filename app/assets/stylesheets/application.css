@@ -13,3 +13,7 @@
  *= require_tree .
  *= require_self
  */
+
+.list-container {
+  max-width: 540px;
+}

@@ -30,8 +30,39 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
+  activerecord:
+    errors:
+      models:
+        user:
+          blank: ' cannot be blank'
+          invalid: ' is invalid'
+          taken: ' is already used'
+    attributes:
+      user:
+        name: 'Name'
+        email: 'Email'
+  helpers:
+    label:
+      user:
+        name: 'Name'
+        email: 'Email'
+  common:
+    save: 'Save'
   admin:
     login:
       title: 'Admin login'
       button: 'Login'
       forgot_password: 'Forgot your password?'
+  users:
+    attributes:
+      name: 'Name'
+      email: 'Email'
+      action: 'Action'
+    index:
+      title: 'Manage Users'
+    new:
+      title: 'Create New User'
+      notice: 'User was succesfully created'
+
+
+
