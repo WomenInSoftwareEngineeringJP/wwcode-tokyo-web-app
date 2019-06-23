@@ -30,6 +30,17 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
+  activerecord:
+    errors:
+      models:
+        user:
+          blank: ' cannot be blank'
+          invalid: ' is invalid'
+          taken: ' is already used'
+    attributes:
+      user:
+        name: 'Name'
+        email: 'Email'
   helpers:
     label:
       user:
