@@ -51,6 +51,7 @@ en:
       title: 'Manage Users'
     new:
       title: 'Create New User'
+      notice: 'User was succesfully created'
 
 
 

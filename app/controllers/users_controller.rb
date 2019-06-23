@@ -16,7 +16,7 @@ class UsersController < ApplicationController
       if @user.save
         @user.send_reset_password_instructions
 
-        format.html { redirect_to users_url, notice: 'User was succesfully created'}
+        format.html { redirect_to users_url, notice: I18n.t('users.new.notice') }
         format.json { render :show, status: :created, location: users_url}
       else
         format.html { render :new }
