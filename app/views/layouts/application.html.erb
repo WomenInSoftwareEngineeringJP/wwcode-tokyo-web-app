@@ -37,11 +37,10 @@
               <p class="text-muted">Add some information about the page here, the author, or any other background context. Make it a few sentences long so folks can pick up some informative tidbits. Then, link them off to some social networking sites or contact information.</p>
             </div>
             <div class="col-sm-4 offset-md-1 py-4">
-              <h4>Contact</h4>
+              <h4>Language</h4>
               <ul class="list-unstyled">
-                <li><a href="#">Follow on Twitter</a></li>
-                <li><a href="#">Like on Facebook</a></li>
-                <li><a href="#">Email me</a></li>
+                <li><%= link_to "English", set_locale_path(new_locale: 'en') %></li>
+                <li><%= link_to "日本語", set_locale_path(new_locale: 'ja') %></li>
               </ul>
             </div>
           </div>

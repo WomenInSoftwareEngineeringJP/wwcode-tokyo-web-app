@@ -1,8 +1,11 @@
 Rails.application.routes.draw do
-  devise_for :users
-  root to: 'urls#index'
-  resources :urls, param: :slug
+  scope "(:locale)", locale: /#{I18n.available_locales.join("|")}/ do
+    get '/set_locale/:new_locale', to: 'locale#update', as: :set_locale
 
-  get '/:slug', to: 'urls#show'
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+    devise_for :users
+    root to: 'urls#index'
+    resources :urls, param: :slug
+
+    get '/:slug', to: 'urls#show'
+  end
 end
