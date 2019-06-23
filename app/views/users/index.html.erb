@@ -1,11 +1,11 @@
 <div class="container list-container">
-  <h3 class="mt-3">Manage Users</h3>
+  <h3 class="mt-3"><%= I18n.t('users.index.title') %></h3>
   <table class="table mt-4">
     <thead>
       <tr>
-        <th scope="col">Name</th>
-        <th scope="col">Email</th>
-        <th scope="col">Action</th>
+        <th scope="col"><%= I18n.t('users.attributes.name') %></th>
+        <th scope="col"><%= I18n.t('users.attributes.email') %></th>
+        <th scope="col"><%= I18n.t('users.attributes.action') %></th>
       </tr>
     </thead>
     <tbody>

@@ -30,8 +30,27 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
+  helpers:
+    label:
+      user:
+        name: 'Name'
+        email: 'Email'
+  common:
+    save: 'Save'
   admin:
     login:
       title: 'Admin login'
       button: 'Login'
       forgot_password: 'Forgot your password?'
+  users:
+    attributes:
+      name: 'Name'
+      email: 'Email'
+      action: 'Action'
+    index:
+      title: 'Manage Users'
+    new:
+      title: 'Create New User'
+
+
+
